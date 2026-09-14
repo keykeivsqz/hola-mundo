@@ -1,3 +1,5 @@
+
+/* --- Colores fuente --- */
 :root {
   --bg: #1b201a;
   --bg-alt: #242c22;
@@ -303,4 +305,3 @@ html {
     padding: 3rem 1.2rem;
   }
 }
-EOF
