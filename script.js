@@ -1,6 +1,4 @@
-const boton = document.getElementById("boton");
-const mensaje = document.getElementById("mensaje");
-
-boton.addEventListener("click", () => {
-  mensaje.textContent = "¡JavaScript está funcionando! 🚀";
-});
+// Por ahora no necesitamos JavaScript, pero lo dejamos listo
+// para cuando querramos agregar interactividad (ej. un formulario de contacto,
+// un modo claro/oscuro, o animaciones al hacer scroll).
+EOF

@@ -1,59 +1,102 @@
-body {
-  font-family: system-ui, sans-serif;
-  background-color: #1e1e2e;
-  color: #f5f5f5;
+/* --- Navegación --- */
+nav {
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  padding: 1rem 2rem;
+  background-color: #11111b;
+  z-index: 100;
+}
+
+.nav-marca {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #89b4fa;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
   margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
+  padding: 0;
 }
 
-main {
+.nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #89b4fa;
+}
+
+/* --- Hero / Inicio --- */
+header#inicio {
   text-align: center;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(180deg, #181825 0%, #1e1e2e 100%);
+}
+
+.tagline {
   max-width: 500px;
-  width: 100%;
+  margin: 1rem auto 0;
+  color: #a6adc8;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
+.boton-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.6rem;
   background-color: #89b4fa;
   color: #1e1e2e;
-  cursor: pointer;
-  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-button:hover {
+.boton-cta:hover {
   background-color: #74a8f7;
 }
 
-/* --- Estilos para pantallas pequeñas (celulares) --- */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
+.subtitulo-seccion {
+  margin-top: 1.5rem;
+  color: #89b4fa;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6c7086;
+  font-size: 0.85rem;
+  border-top: 1px solid #313244;
+}
+
+/* --- Scroll suave al usar el menú --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Navbar responsive --- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
   }
 
-  p {
-    font-size: 0.9rem;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  button {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1.1rem;
+  header#inicio {
+    padding: 3rem 1rem;
   }
 }
+EOF
