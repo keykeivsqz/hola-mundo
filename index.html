@@ -4,33 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kevin Vásquez | Técnico Informático</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav>
-    <div class="nav-marca">KV</div>
+    <div class="nav-marca">Kevin Vásquez</div>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#perfil">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trabajo">Trabajo</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#formacion">Formación</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <header id="inicio">
-    <h1>Kevin Vásquez Velásquez</h1>
-    <p class="subtitulo">Técnico Informático</p>
-    <p class="tagline">Resolviendo problemas técnicos con proactividad y compromiso.</p>
-    <a href="#contacto" class="boton-cta">Contáctame</a>
+    <div class="hero-textura"></div>
+    <div class="hero-contenido">
+      <p class="eyebrow">Técnico Informático</p>
+      <h1>Kevin Vásquez Velásquez</h1>
+      <p class="tagline">Soluciones tecnológicas con calma, criterio y raíces bien puestas.</p>
+      <div class="hero-botones">
+        <a href="#servicios" class="boton boton-primario">Ver servicios</a>
+        <a href="#trabajo" class="boton boton-secundario">Ver mi trabajo</a>
+      </div>
+    </div>
   </header>
 
   <main>
 
     <section id="perfil">
-      <h2>Sobre mí</h2>
+      <p class="eyebrow">Sobre mí</p>
+      <h2>Quién soy</h2>
       <p>
         Soy un profesional en gestión de proyectos y liderazgo de equipos.
         Poseo habilidades sólidas en planificación estratégica, resolución
@@ -40,9 +50,62 @@
       </p>
     </section>
 
+    <section id="servicios" class="seccion-alt">
+      <p class="eyebrow">Servicios</p>
+      <h2>En qué puedo ayudarte</h2>
+      <p class="nota-editar">✏️ Estos son servicios de ejemplo — cuéntame cuáles ofreces realmente y los cambiamos.</p>
+      <div class="grid-tarjetas">
+        <article class="tarjeta">
+          <span class="tarjeta-icono">🛠️</span>
+          <h3>Soporte técnico</h3>
+          <p>Diagnóstico y reparación de equipos, impresoras y redes domésticas o de oficina.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="tarjeta-icono">💻</span>
+          <h3>Mantenimiento preventivo</h3>
+          <p>Revisión periódica de equipos para evitar fallas antes de que ocurran.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="tarjeta-icono">🌐</span>
+          <h3>Asesoría tecnológica</h3>
+          <p>Recomendaciones claras para elegir equipo o resolver problemas técnicos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="trabajo">
+      <p class="eyebrow">Portafolio</p>
+      <h2>Mi trabajo</h2>
+      <p class="nota-editar">✏️ Espacio reservado — aquí van proyectos, capturas o casos reales que quieras mostrar.</p>
+      <div class="grid-tarjetas">
+        <article class="tarjeta tarjeta-proyecto">
+          <h3>Proyecto de ejemplo 1</h3>
+          <p>Breve descripción de qué hiciste y qué resultado tuvo.</p>
+        </article>
+        <article class="tarjeta tarjeta-proyecto">
+          <h3>Proyecto de ejemplo 2</h3>
+          <p>Breve descripción de qué hiciste y qué resultado tuvo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="blog" class="seccion-alt">
+      <p class="eyebrow">Blog</p>
+      <h2>Notas y aprendizajes</h2>
+      <p class="nota-editar">✏️ Aquí puedes ir agregando artículos cortos: cosas que aprendes, tips técnicos, etc.</p>
+      <div class="grid-tarjetas">
+        <article class="tarjeta tarjeta-blog">
+          <p class="fecha-blog">Próximamente</p>
+          <h3>Tu primera entrada de blog</h3>
+          <p>Cuando quieras, escribimos tu primer artículo y lo agregamos aquí.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="formacion">
+      <p class="eyebrow">Trayectoria</p>
       <h2>Formación</h2>
-      <article>
+      <article class="item-cv">
         <h3>Perito en Electrónica y Dispositivos Digitales</h3>
         <p class="detalle">Colegio Mixto Pre-Universitario Galileo Galilei, Antigua Guatemala · 2022 - 2024</p>
         <p>
@@ -53,9 +116,9 @@
       </article>
     </section>
 
-    <section id="experiencia">
+    <section id="experiencia" class="seccion-alt">
       <h2>Experiencia</h2>
-      <article>
+      <article class="item-cv">
         <h3>Técnico de TI</h3>
         <p class="detalle">Sys Informática, Antigua Guatemala</p>
         <ul>
@@ -81,8 +144,9 @@
       <p>Español (Nativo) · Inglés</p>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
+    <section id="contacto" class="seccion-alt">
+      <p class="eyebrow">Contacto</p>
+      <h2>Hablemos</h2>
       <p>📧 vasquezvkevin@gmail.com</p>
       <p>📍 Jocotenango, Sacatepéquez</p>
     </section>
@@ -96,3 +160,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+EOF

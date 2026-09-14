@@ -1,3 +1,41 @@
+:root {
+  --bg: #1b201a;
+  --bg-alt: #242c22;
+  --verde-musgo: #8fae76;
+  --verde-bosque: #4f6b47;
+  --terracota: #c97b4a;
+  --texto: #eef0e6;
+  --texto-suave: #a9b39c;
+  --borde: #34402f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--texto);
+  margin: 0;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--verde-musgo);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
 /* --- Navegación --- */
 nav {
   position: sticky;
@@ -6,97 +44,263 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #11111b;
+  background-color: rgba(27, 32, 26, 0.9);
+  backdrop-filter: blur(6px);
   z-index: 100;
+  border-bottom: 1px solid var(--borde);
 }
 
 .nav-marca {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #89b4fa;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--texto);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.3rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
-  color: #f5f5f5;
+  color: var(--texto-suave);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .nav-links a:hover {
-  color: #89b4fa;
+  color: var(--verde-musgo);
 }
 
 /* --- Hero / Inicio --- */
 header#inicio {
+  position: relative;
   text-align: center;
-  padding: 5rem 1.5rem;
-  background: linear-gradient(180deg, #181825 0%, #1e1e2e 100%);
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+  background: radial-gradient(ellipse at top, #2c3527 0%, #1b201a 70%);
+}
+
+/* Textura tipo "tinta suminagashi": manchas orgánicas suaves */
+.hero-textura {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 30%, rgba(143, 174, 118, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(201, 123, 74, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(79, 107, 71, 0.2) 0%, transparent 45%);
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0.3rem 0;
 }
 
 .tagline {
-  max-width: 500px;
+  max-width: 480px;
   margin: 1rem auto 0;
-  color: #a6adc8;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
 }
 
-.boton-cta {
+.hero-botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.boton {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.6rem;
-  background-color: #89b4fa;
-  color: #1e1e2e;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
-.boton-cta:hover {
-  background-color: #74a8f7;
+.boton-primario {
+  background-color: var(--terracota);
+  color: #1b201a;
+}
+
+.boton-primario:hover {
+  background-color: #d98c5c;
+}
+
+.boton-secundario {
+  border: 1.5px solid var(--verde-musgo);
+  color: var(--verde-musgo);
+}
+
+.boton-secundario:hover {
+  background-color: rgba(143, 174, 118, 0.1);
+}
+
+/* --- Layout general de secciones --- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 4rem 1.5rem;
+}
+
+.seccion-alt {
+  background-color: var(--bg-alt);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.nota-editar {
+  color: var(--verde-musgo);
+  font-size: 0.85rem;
+  background-color: rgba(143, 174, 118, 0.08);
+  border: 1px dashed var(--verde-musgo);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Tarjetas (servicios, portafolio, blog) --- */
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.tarjeta {
+  background-color: var(--bg);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.seccion-alt .tarjeta {
+  background-color: var(--bg-alt);
+  border-color: #3d4a37;
+}
+
+.tarjeta-icono {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: var(--texto);
+}
+
+.tarjeta p {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.tarjeta-blog .fecha-blog {
+  color: var(--terracota);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+/* --- CV: formación / experiencia --- */
+.item-cv {
+  margin-bottom: 1rem;
+}
+
+.item-cv h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--texto);
+}
+
+.detalle {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin-top: 0;
 }
 
 .subtitulo-seccion {
-  margin-top: 1.5rem;
-  color: #89b4fa;
+  margin-top: 1.8rem;
+  color: var(--verde-musgo);
+  font-size: 1.2rem;
+}
+
+/* --- Habilidades (tags) --- */
+.lista-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.lista-tags li {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
 }
 
 /* --- Footer --- */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  color: #6c7086;
+  padding: 1.8rem;
+  color: var(--texto-suave);
   font-size: 0.85rem;
-  border-top: 1px solid #313244;
+  border-top: 1px solid var(--borde);
 }
 
-/* --- Scroll suave al usar el menú --- */
 html {
   scroll-behavior: smooth;
 }
 
-/* --- Navbar responsive --- */
+/* --- Responsive --- */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.7rem;
     padding: 1rem;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.9rem;
   }
 
   header#inicio {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 3rem 1.2rem;
   }
 }
 EOF
