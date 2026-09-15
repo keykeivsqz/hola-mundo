@@ -60,8 +60,8 @@ nav {
 }
 
 .logoSuperior {
-  height: 75px;   /* ajusta este valor a tu gusto */
-  width: auto;    /* mantiene la proporción, no la deforma */
+  height: clamp(30px, 8vw, 80px);
+  width: auto;
 }
 
 .nav-links {
