@@ -59,6 +59,11 @@ nav {
   color: var(--texto);
 }
 
+.logoSuperior {
+  height: 75px;   /* ajusta este valor a tu gusto */
+  width: auto;    /* mantiene la proporción, no la deforma */
+}
+
 .nav-links {
   list-style: none;
   display: flex;
