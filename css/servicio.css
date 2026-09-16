@@ -11,7 +11,7 @@
 }
 
 .servicio-hero .eyebrow { color: var(--tierra); }
-.servicio-hero p.resumen { color: var(--salvia); font-size: 1.1rem; }
+.servicio-hero p.resumen { color: var(--verde-manzana); font-size: 1.1rem; }
 
 .servicio-hero .hero-botones { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
 
@@ -79,8 +79,13 @@ body.pagina-interna h1,
 body.pagina-interna h2,
 body.pagina-interna h3 { color: var(--texto-oscuro); }
 
+/* Antes usaba --tierra-clara (#cea171): muy poco contraste sobre el
+   nuevo fondo amarillo pálido (#fffacd). Se cambió a --texto-oscuro
+   para que el texto de párrafos y listas sea legible. Guarda
+   --tierra-clara para detalles puntuales (bordes, iconos), no para
+   texto de lectura. */
 body.pagina-interna p,
-body.pagina-interna li { color: var(--oliva-oscuro); }
+body.pagina-interna li { color: var(--texto-oscuro); }
 
 body.pagina-interna .eyebrow { color: var(--tierra); }
 
@@ -104,4 +109,11 @@ body.pagina-interna .nota-editar { color: var(--gris-musgo); }
 body.pagina-interna footer {
   border-top-color: var(--fondo-claro-alt);
   color: var(--verde-oliva);
+}
+
+/* El logo está pensado para fondo oscuro (home); en páginas claras
+   lo volvemos negro con un filtro, sin necesitar un archivo aparte. */
+body.pagina-interna .logoFooter {
+  filter: brightness(0);
+  opacity: 0.85;
 }

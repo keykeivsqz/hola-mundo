@@ -13,11 +13,13 @@
   --salvia:        #A3B18A;
   --arcilla:       #B96B55;
   --gris-musgo:    #4A5547;
+  --tierra-clara:  #cea171;
+  --verde-manzana: #76A02F;
 
   /* Variante clara para páginas internas (servicios, formación, etc.)
      — mismo universo de color, pero más luminoso, para que se sienta
      un cambio real de página frente al home oscuro. */
-  --fondo-claro:      #EDE9DA;
+  --fondo-claro:      #fffacd;
   --fondo-claro-alt:  #E2DCC8;
   --texto-oscuro:     #26301D;
 
