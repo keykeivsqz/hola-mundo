@@ -126,7 +126,7 @@ header#inicio {
   margin: 0 0 1.5rem;
 }
 .lista-tags li {
-  background: var(--verde-manzana);
+  background: var(--oliva-oscuro);
   color: var(--beige);
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
@@ -138,3 +138,18 @@ header#inicio {
 .contacto-final h2 { max-width: 18ch; }
 .contacto-datos { margin-top: 1.8rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
 .contacto-ubicacion { color: var(--salvia); margin: 0; }
+
+/* Aviso del blog en el home */
+.blog-teaser { padding-top: 3rem; padding-bottom: 0; }
+.blog-teaser-caja {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: var(--fondo-alt);
+  border: 1px solid var(--oliva-oscuro);
+  border-radius: var(--radio);
+  padding: 2rem 2.2rem;
+}
+.blog-teaser-caja p { color: var(--salvia); margin: 0.3rem 0 0; }
