@@ -63,3 +63,45 @@
   margin: 0 auto;
 }
 .servicio-cta .hero-botones { justify-content: center; }
+
+/* =========================================================
+   Tema claro para páginas internas
+   Se activa con <body class="pagina-interna">. Da la sensación
+   de haber cambiado de página real frente al home oscuro,
+   manteniendo la misma paleta bosque/tierra.
+   ========================================================= */
+body.pagina-interna {
+  background: var(--fondo-claro);
+  color: var(--texto-oscuro);
+}
+
+body.pagina-interna h1,
+body.pagina-interna h2,
+body.pagina-interna h3 { color: var(--texto-oscuro); }
+
+body.pagina-interna p,
+body.pagina-interna li { color: var(--oliva-oscuro); }
+
+body.pagina-interna .eyebrow { color: var(--tierra); }
+
+body.pagina-interna .migas { color: var(--verde-oliva); }
+body.pagina-interna .migas a { color: var(--verde-oliva); }
+body.pagina-interna .migas a:hover { color: var(--arcilla); }
+
+body.pagina-interna .boton-secundario {
+  border-color: var(--verde-oliva);
+  color: var(--texto-oscuro);
+}
+body.pagina-interna .boton-secundario:hover {
+  border-color: var(--arcilla);
+  color: var(--arcilla);
+}
+
+body.pagina-interna .servicio-detalle h3 { color: var(--verde-oliva); }
+
+body.pagina-interna .nota-editar { color: var(--gris-musgo); }
+
+body.pagina-interna footer {
+  border-top-color: var(--fondo-claro-alt);
+  color: var(--verde-oliva);
+}
