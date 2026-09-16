@@ -1,126 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Vásquez | Profesional</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Vásquez | Ingeniero en Sistemas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <div class="nav-marca">
-      <a href="#inicio"><img class="logoSuperior" src="img/logo.png" alt="Logotipo de la empresa"></a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#perfil">Sobre mí</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#trabajo">Trabajo</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#formacion">Formación</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="nav-marca">
+    <a href="#inicio"><img class="logoSuperior" src="img/logo.png" alt="Logotipo de Kevin Vásquez"></a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#perfil">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#trabajo">Trabajo</a></li>
+    <li><a href="#formacion">Trayectoria</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
 
-  <header id="inicio">
-    <div class="hero-textura"></div>
-    <div class="hero-contenido">
-      <p class="eyebrow">Ingeniero en Sistemas</p>
-      <h1>Kevin Vásquez Velásquez</h1>
-      <p class="tagline">Soluciones tecnológicas con calma, criterio y raíces bien puestas.</p>
-      <div class="hero-botones">
-        <a href="#servicios" class="boton boton-primario">Ver servicios</a>
-        <a href="#trabajo" class="boton boton-secundario">Ver mi trabajo</a>
+<header id="inicio">
+  <!-- Raíces animadas de fondo: se dibujan solas al cargar la página -->
+  <svg class="hero-raices" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+    <path class="raiz raiz-1" d="M -20 60 C 200 40, 350 120, 560 90 S 900 40, 1220 100" />
+    <path class="raiz raiz-2" d="M -20 420 C 250 460, 400 380, 620 430 S 950 470, 1220 400" />
+    <path class="raiz raiz-3" d="M -20 250 C 300 200, 500 300, 700 240 S 1000 180, 1220 260" />
+  </svg>
+
+  <div class="hero-contenido">
+    <p class="eyebrow" data-anim="1">Ingeniero en Sistemas</p>
+    <h1 data-anim="2">Kevin Vásquez Velásquez</h1>
+    <p class="tagline" data-anim="3">Soluciones tecnológicas con calma, criterio y raíces bien puestas.</p>
+    <div class="hero-botones" data-anim="4">
+      <a href="#servicios" class="boton boton-primario">Ver servicios</a>
+      <a href="#trabajo" class="boton boton-secundario">Ver mi trabajo</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Cinta de herramientas / tecnologías, estilo "logos de clientes" pero con tu stack -->
+  <section class="cinta-stack" aria-label="Herramientas y tecnologías">
+    <div class="cinta-track">
+      <span>Windows Server</span><span>Redes LAN/WiFi</span><span>Linux</span><span>Impresoras y periféricos</span>
+      <span>Soporte remoto</span><span>Mantenimiento preventivo</span><span>Bash</span><span>Diagnóstico de hardware</span>
+      <!-- duplicado para el loop continuo -->
+      <span>Windows Server</span><span>Redes LAN/WiFi</span><span>Linux</span><span>Impresoras y periféricos</span>
+      <span>Soporte remoto</span><span>Mantenimiento preventivo</span><span>Bash</span><span>Diagnóstico de hardware</span>
+    </div>
+  </section>
+
+  <section id="perfil">
+    <p class="eyebrow">Sobre mí</p>
+    <h2>Quién soy</h2>
+    <p>
+      Soy un profesional en gestión de proyectos y liderazgo de equipos.
+      Poseo habilidades sólidas en planificación estratégica, resolución
+      de problemas y comunicación efectiva. Mi enfoque proactivo y mi
+      capacidad para adaptarme a entornos cambiantes me permiten aportar
+      valor constante a cada proyecto en el que participo.
+    </p>
+
+    <div class="stats-fila">
+      <div class="stat">
+        <span class="stat-numero" data-target="2">0</span>
+        <span class="stat-label">años de experiencia en TI</span>
+      </div>
+      <div class="stat">
+        <span class="stat-numero" data-target="0">0</span>
+        <span class="stat-label">equipos y redes atendidos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-numero" data-target="0">0</span>
+        <span class="stat-label">clientes satisfechos</span>
       </div>
     </div>
-  </header>
+    <p class="nota-editar">✏️ Ajusta estos tres números a tus cifras reales — por ahora están en 0.</p>
+  </section>
 
-  <main>
+  <section id="servicios" class="seccion-alt">
+    <p class="eyebrow">Servicios</p>
+    <h2>En qué puedo ayudarte</h2>
+    <p class="nota-editar">✏️ Servicios de ejemplo — dime cuáles ofreces realmente y los ajustamos.</p>
 
-    <section id="perfil">
-      <p class="eyebrow">Sobre mí</p>
-      <h2>Quién soy</h2>
-      <p>
-        Soy un profesional en gestión de proyectos y liderazgo de equipos.
-        Poseo habilidades sólidas en planificación estratégica, resolución
-        de problemas y comunicación efectiva. Mi enfoque proactivo y mi
-        capacidad para adaptarme a entornos cambiantes me permiten aportar
-        valor constante a cada proyecto en el que participo.
-      </p>
-    </section>
-
-    <section id="servicios" class="seccion-alt">
-      <p class="eyebrow">Servicios</p>
-      <h2>En qué puedo ayudarte</h2>
-      <!--<p class="nota-editar">✏️ Estos son servicios de ejemplo — cuéntame cuáles ofreces realmente y los cambiamos.</p>-->
-      <div class="grid-tarjetas">
-        <article class="tarjeta">
-          <span class="tarjeta-icono">🛠️</span>
+    <div class="grid-servicios">
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-soporte.jpg"></div>
+        <div class="tarjeta-texto">
           <h3>Soporte técnico</h3>
           <p>Diagnóstico y reparación de equipos, impresoras y redes domésticas o de oficina.</p>
-        </article>
-        <article class="tarjeta">
-          <span class="tarjeta-icono">💻</span>
+        </div>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-mantenimiento.jpg"></div>
+        <div class="tarjeta-texto">
           <h3>Mantenimiento preventivo</h3>
           <p>Revisión periódica de equipos para evitar fallas antes de que ocurran.</p>
-        </article>
-        <article class="tarjeta">
-          <span class="tarjeta-icono">🌐</span>
+        </div>
+      </article>
+
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-asesoria.jpg"></div>
+        <div class="tarjeta-texto">
           <h3>Asesoría tecnológica</h3>
           <p>Recomendaciones claras para elegir equipo o resolver problemas técnicos.</p>
-        </article>
-      </div>
-    </section>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <section id="trabajo">
-      <p class="eyebrow">Portafolio</p>
-      <h2>Mi trabajo</h2>
-      <!--<p class="nota-editar">✏️ Espacio reservado — aquí van proyectos, capturas o casos reales que quieras mostrar.</p>-->
-      <div class="grid-tarjetas">
-        <article class="tarjeta tarjeta-proyecto">
+  <section id="trabajo">
+    <p class="eyebrow">Portafolio</p>
+    <h2>Mi trabajo</h2>
+
+    <!-- Proyecto destacado, como el "caso de éxito" grande de btodigital -->
+    <article class="proyecto-destacado">
+      <div class="proyecto-imagen placeholder-img" data-placeholder="img/proyecto-destacado.jpg"></div>
+      <div class="proyecto-texto">
+        <p class="eyebrow">Proyecto destacado</p>
+        <h3>Nombre de tu proyecto principal</h3>
+        <p>
+          Cuéntame el proyecto del que estés más orgulloso: qué problema resolviste,
+          qué herramientas usaste y qué resultado tuvo. Esta es la carta de presentación
+          de tu trabajo.
+        </p>
+        <a href="#contacto" class="boton boton-secundario">Ver detalle</a>
+      </div>
+    </article>
+
+    <p class="nota-editar">✏️ Espacio reservado — aquí van más proyectos, capturas o casos reales que quieras mostrar.</p>
+    <div class="grid-servicios">
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/proyecto-1.jpg"></div>
+        <div class="tarjeta-texto">
           <h3>Proyecto de ejemplo 1</h3>
           <p>Breve descripción de qué hiciste y qué resultado tuvo.</p>
-        </article>
-        <article class="tarjeta tarjeta-proyecto">
+        </div>
+      </article>
+      <article class="tarjeta-servicio">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/proyecto-2.jpg"></div>
+        <div class="tarjeta-texto">
           <h3>Proyecto de ejemplo 2</h3>
           <p>Breve descripción de qué hiciste y qué resultado tuvo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="blog" class="seccion-alt">
-      <p class="eyebrow">Blog</p>
-      <h2>Notas y aprendizajes</h2>
-      <!--<p class="nota-editar">✏️ Aquí puedes ir agregando artículos cortos: cosas que aprendes, tips técnicos, etc.</p>-->
-      <div class="grid-tarjetas">
-        <article class="tarjeta tarjeta-blog">
-          <p class="fecha-blog">Próximamente</p>
-          <h3>Tu primera entrada de blog</h3>
-          <p>Cuando quieras, escribimos tu primer artículo y lo agregamos aquí.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="formacion">
-      <p class="eyebrow">Trayectoria</p>
-      <h2>Formación</h2>
-      <article class="item-cv">
-        <h3>Perito en Electrónica y Dispositivos Digitales</h3>
-        <p class="detalle">Colegio Mixto Pre-Universitario Galileo Galilei, Antigua Guatemala · 2022 - 2024</p>
-        <p>
-          Me gradué con honores con orientación a Microprocesadores,
-          manteniendo un rendimiento constante y sobresaliente a lo largo
-          de mis estudios.
-        </p>
+        </div>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section id="experiencia" class="seccion-alt">
-      <h2>Experiencia</h2>
-      <article class="item-cv">
+  <section id="formacion" class="seccion-alt">
+    <p class="eyebrow">Trayectoria</p>
+    <h2>Formación y experiencia</h2>
+
+    <ol class="linea-tiempo">
+      <li>
+        <span class="linea-fecha">2022 – 2024</span>
+        <h3>Perito en Electrónica y Dispositivos Digitales</h3>
+        <p class="detalle">Colegio Mixto Pre-Universitario Galileo Galilei, Antigua Guatemala</p>
+        <p>Me gradué con honores con orientación a Microprocesadores, manteniendo un rendimiento constante y sobresaliente a lo largo de mis estudios.</p>
+      </li>
+      <li>
+        <span class="linea-fecha">Actualidad</span>
         <h3>Técnico de TI</h3>
         <p class="detalle">Sys Informática, Antigua Guatemala</p>
         <ul>
@@ -128,11 +177,11 @@
           <li>Colaboración eficaz en entornos de trabajo en equipo.</li>
           <li>Proactividad y aprendizaje constante para anticiparme a necesidades del entorno.</li>
         </ul>
-      </article>
-    </section>
+      </li>
+    </ol>
 
-    <section id="habilidades">
-      <h2>Habilidades</h2>
+    <div class="habilidades-bloque">
+      <h3 class="subtitulo-seccion">Habilidades</h3>
       <ul class="lista-tags">
         <li>Capacidad para seguir indicaciones</li>
         <li>Facilidad para adquirir nuevos conocimientos</li>
@@ -144,21 +193,26 @@
       </ul>
       <h3 class="subtitulo-seccion">Idiomas</h3>
       <p>Español (Nativo) · Inglés</p>
-    </section>
+    </div>
+  </section>
 
-    <section id="contacto" class="seccion-alt">
-      <p class="eyebrow">Contacto</p>
-      <h2>Hablemos</h2>
-      <p>📧 vasquezvkevin@gmail.com</p>
-      <p>📍 Jocotenango, Sacatepéquez</p>
-    </section>
+  <section id="contacto" class="contacto-final">
+    <p class="eyebrow">Contacto</p>
+    <h2>¿Tienes un equipo, una red o un proyecto<br>que necesita orden?</h2>
+    <p>Hablemos y vemos cómo puedo ayudarte.</p>
+    <div class="contacto-datos">
+      <a href="mailto:vasquezvkevin@gmail.com" class="boton boton-primario">vasquezvkevin@gmail.com</a>
+      <p class="contacto-ubicacion">📍 Jocotenango, Sacatepéquez</p>
+    </div>
+  </section>
 
-  </main>
+</main>
 
-  <footer>
-    <p>© 2026 Kevin Vásquez Velásquez</p>
-  </footer>
+<footer>
+  <img class="logoFooter" src="img/logo.png" alt="Logotipo de Kevin Vásquez">
+  <p>© 2026 Kevin Vásquez Velásquez</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
