@@ -1,0 +1,65 @@
+/* =========================================================
+   servicio.css
+   Plantilla visual para CADA página de servicio
+   (servicios/soporte-tecnico.html y las que sigan el mismo patrón).
+   ========================================================= */
+
+.servicio-hero {
+  padding: 5rem 6% 4rem;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+
+.servicio-hero .eyebrow { color: var(--tierra); }
+.servicio-hero p.resumen { color: var(--salvia); font-size: 1.1rem; }
+
+.servicio-hero .hero-botones { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+
+/* Imagen ancha de introducción del servicio */
+.servicio-imagen-portada {
+  aspect-ratio: 16 / 7;
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto 2rem;
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+
+/* Bloques "para quién es" / "qué incluye" */
+.servicio-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 4rem 6%;
+}
+
+.servicio-detalle h3 { color: var(--verde-hoja); }
+
+.servicio-detalle ul { padding-left: 1.2rem; color: var(--beige); }
+.servicio-detalle li { margin-bottom: 0.5rem; }
+
+@media (max-width: 760px) {
+  .servicio-detalle { grid-template-columns: 1fr; }
+}
+
+/* Migas de pan simples para volver a servicios */
+.migas {
+  max-width: var(--ancho-maximo);
+  margin: 1.2rem auto 0;
+  padding: 0 6%;
+  font-size: 0.85rem;
+  color: var(--gris-musgo);
+}
+.migas a { color: var(--gris-musgo); }
+.migas a:hover { color: var(--verde-hoja); }
+
+/* CTA de cierre, igual en todas las páginas de servicio */
+.servicio-cta {
+  text-align: center;
+  padding: 4rem 6% 6rem;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+.servicio-cta .hero-botones { justify-content: center; }

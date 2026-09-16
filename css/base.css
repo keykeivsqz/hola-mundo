@@ -1,0 +1,86 @@
+/* =========================================================
+   base.css
+   Variables, reset y tipografía. Se carga en TODAS las páginas.
+   ========================================================= */
+:root {
+  --fondo:        #10150F;
+  --fondo-alt:     #161C13;
+  --verde-hoja:    #8FAF63;
+  --verde-oliva:   #6F8F52;
+  --tierra:        #A77B4D;
+  --beige:         #D2D6B8;
+  --oliva-oscuro:  #34432D;
+  --salvia:        #A3B18A;
+  --arcilla:       #B96B55;
+  --gris-musgo:    #4A5547;
+
+  --fuente-display: "Fraunces", Georgia, serif;
+  --fuente-texto:   "Inter", system-ui, sans-serif;
+
+  --ancho-maximo: 1100px;
+  --radio: 6px;
+}
+
+* { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--beige);
+  font-family: var(--fuente-texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-display);
+  color: var(--beige);
+  margin: 0 0 0.4em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+h3 { font-size: 1.25rem; font-weight: 500; }
+
+p { max-width: 62ch; }
+
+a { color: var(--verde-hoja); }
+
+.eyebrow {
+  font-family: var(--fuente-texto);
+  color: var(--tierra);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0 0 0.6em;
+}
+
+.nota-editar {
+  color: var(--gris-musgo);
+  font-size: 0.9rem;
+  font-style: italic;
+  max-width: 62ch;
+}
+
+section {
+  padding: 5rem 6%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+
+.seccion-alt {
+  max-width: 100%;
+  background: var(--fondo-alt);
+}
+.seccion-alt > * { max-width: var(--ancho-maximo); margin-left: auto; margin-right: auto; }

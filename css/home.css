@@ -1,0 +1,140 @@
+/* =========================================================
+   home.css
+   Solo lo que es exclusivo de index.html: hero, cinta,
+   estadísticas, proyecto destacado, línea de tiempo, contacto.
+   ========================================================= */
+
+header#inicio {
+  position: relative;
+  padding: 7rem 6% 6rem;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 20% 0%, var(--oliva-oscuro) 0%, var(--fondo) 60%);
+}
+
+.hero-raices { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.raiz {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: dibujar-raiz 2.4s ease-out forwards;
+}
+.raiz-1 { stroke: var(--verde-oliva); opacity: 0.5; animation-delay: 0.1s; }
+.raiz-2 { stroke: var(--tierra);      opacity: 0.35; animation-delay: 0.4s; }
+.raiz-3 { stroke: var(--gris-musgo);  opacity: 0.45; animation-delay: 0.25s; }
+
+@keyframes dibujar-raiz { to { stroke-dashoffset: 0; } }
+
+.hero-contenido { position: relative; max-width: 720px; }
+.hero-contenido .tagline { font-size: 1.15rem; color: var(--salvia); }
+.hero-botones { display: flex; gap: 1rem; margin-top: 1.8rem; flex-wrap: wrap; }
+
+[data-anim] {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: entrada-hero 0.7s ease-out forwards;
+}
+[data-anim="1"] { animation-delay: 0.15s; }
+[data-anim="2"] { animation-delay: 0.3s; }
+[data-anim="3"] { animation-delay: 0.45s; }
+[data-anim="4"] { animation-delay: 0.6s; }
+
+@keyframes entrada-hero { to { opacity: 1; transform: translateY(0); } }
+
+/* Cinta de stack */
+.cinta-stack {
+  overflow: hidden;
+  border-top: 1px solid var(--oliva-oscuro);
+  border-bottom: 1px solid var(--oliva-oscuro);
+  background: var(--fondo-alt);
+  padding: 0.9rem 0;
+}
+
+.cinta-track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: desplazar-cinta 28s linear infinite;
+}
+
+.cinta-track span { color: var(--gris-musgo); font-size: 0.9rem; white-space: nowrap; }
+
+@keyframes desplazar-cinta {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Estadísticas */
+.stats-fila { display: flex; gap: 3rem; flex-wrap: wrap; margin-top: 2rem; }
+.stat { display: flex; flex-direction: column; }
+.stat-numero { font-family: var(--fuente-display); font-size: 2.6rem; color: var(--verde-hoja); }
+.stat-label { color: var(--salvia); font-size: 0.9rem; }
+
+/* Proyecto destacado */
+.proyecto-destacado {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 2rem;
+  background: var(--fondo-alt);
+  border: 1px solid var(--oliva-oscuro);
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+.proyecto-imagen { aspect-ratio: 4 / 3; height: 100%; }
+.proyecto-texto { padding: 2rem 2rem 2rem 0; }
+.proyecto-texto p { color: var(--salvia); }
+
+@media (max-width: 760px) {
+  .proyecto-destacado { grid-template-columns: 1fr; }
+  .proyecto-texto { padding: 0 1.5rem 1.5rem; }
+}
+
+/* Línea de tiempo (resumen en home; la versión completa vive en formación.html) */
+.linea-tiempo {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0 0 0 1.6rem;
+  border-left: 2px solid var(--oliva-oscuro);
+}
+.linea-tiempo li { position: relative; margin-bottom: 2.4rem; }
+.linea-tiempo li::before {
+  content: "";
+  position: absolute;
+  left: -1.85rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--verde-hoja);
+}
+.linea-fecha { display: inline-block; color: var(--tierra); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+.detalle { color: var(--salvia); font-size: 0.9rem; }
+
+.habilidades-bloque { margin-top: 3rem; }
+.subtitulo-seccion { margin-top: 0; }
+
+.lista-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+.lista-tags li {
+  background: var(--oliva-oscuro);
+  color: var(--beige);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Contacto final */
+.contacto-final { text-align: left; padding-top: 6rem; padding-bottom: 6rem; }
+.contacto-final h2 { max-width: 18ch; }
+.contacto-datos { margin-top: 1.8rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.contacto-ubicacion { color: var(--salvia); margin: 0; }

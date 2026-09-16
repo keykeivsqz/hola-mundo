@@ -6,7 +6,9 @@
 <title>Kevin Vásquez | Ingeniero en Sistemas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -22,7 +24,8 @@
     <li><a href="#perfil">Sobre mí</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#trabajo">Trabajo</a></li>
-    <li><a href="#formacion">Trayectoria</a></li>
+    <li><a href="formacion.html">Trayectoria</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="#contacto" class="nav-cta">Contacto</a></li>
   </ul>
 </nav>
@@ -90,32 +93,56 @@
   <section id="servicios" class="seccion-alt">
     <p class="eyebrow">Servicios</p>
     <h2>En qué puedo ayudarte</h2>
-    <p class="nota-editar">✏️ Servicios de ejemplo — dime cuáles ofreces realmente y los ajustamos.</p>
+    <p class="nota-editar">✏️ Cada tarjeta abre su propia página. Por ahora solo "Soporte técnico" tiene la página armada — las demás quedan enlazadas y listas para cuando las construyamos.</p>
 
     <div class="grid-servicios">
-      <article class="tarjeta-servicio">
+      <a class="tarjeta-servicio" href="servicios/soporte-tecnico.html">
         <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-soporte.jpg"></div>
         <div class="tarjeta-texto">
           <h3>Soporte técnico</h3>
           <p>Diagnóstico y reparación de equipos, impresoras y redes domésticas o de oficina.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="tarjeta-servicio">
-        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-mantenimiento.jpg"></div>
+      <a class="tarjeta-servicio" href="servicios/diseno-grafico.html">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-diseno.jpg"></div>
         <div class="tarjeta-texto">
-          <h3>Mantenimiento preventivo</h3>
-          <p>Revisión periódica de equipos para evitar fallas antes de que ocurran.</p>
+          <h3>Diseño gráfico y vectorización</h3>
+          <p>Logos, artes y vectorizado de imágenes para lo que necesites imprimir o publicar.</p>
         </div>
-      </article>
+      </a>
 
-      <article class="tarjeta-servicio">
-        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-asesoria.jpg"></div>
+      <a class="tarjeta-servicio" href="servicios/etiquetas-stickers.html">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-stickers.jpg"></div>
         <div class="tarjeta-texto">
-          <h3>Asesoría tecnológica</h3>
-          <p>Recomendaciones claras para elegir equipo o resolver problemas técnicos.</p>
+          <h3>Etiquetas, stickers y pósters</h3>
+          <p>Para tu negocio, tu marca o solo porque se te ocurrió algo bonito.</p>
         </div>
-      </article>
+      </a>
+
+      <a class="tarjeta-servicio" href="servicios/desarrollo-web.html">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-web.jpg"></div>
+        <div class="tarjeta-texto">
+          <h3>Desarrollo web</h3>
+          <p>Páginas como esta: pensadas, ordenadas y fáciles de mantener a futuro.</p>
+        </div>
+      </a>
+
+      <a class="tarjeta-servicio" href="servicios/camaras-redes.html">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-camaras.jpg"></div>
+        <div class="tarjeta-texto">
+          <h3>Cámaras y redes</h3>
+          <p>Instalación y configuración de cámaras de seguridad y redes domésticas o de oficina.</p>
+        </div>
+      </a>
+
+      <a class="tarjeta-servicio" href="servicios/chofer.html">
+        <div class="tarjeta-imagen placeholder-img" data-placeholder="img/servicio-chofer.jpg"></div>
+        <div class="tarjeta-texto">
+          <h3>Chofer (carro / moto)</h3>
+          <p>Viajes y traslados con calma y puntualidad.</p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -160,6 +187,7 @@
   <section id="formacion" class="seccion-alt">
     <p class="eyebrow">Trayectoria</p>
     <h2>Formación y experiencia</h2>
+    <p class="nota-editar">✏️ Este resumen se queda aquí; el detalle completo (CV descargable, estudios, certificaciones) va a vivir en <a href="formacion.html">una página aparte</a> — la construimos en el siguiente paso.</p>
 
     <ol class="linea-tiempo">
       <li>
@@ -213,6 +241,6 @@
   <p>© 2026 Kevin Vásquez Velásquez</p>
 </footer>
 
-<script src="script.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
