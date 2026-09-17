@@ -84,7 +84,7 @@ header#inicio {
   border-radius: var(--radio);
   overflow: hidden;
 }
-.proyecto-imagen { aspect-ratio: 4 / 3; height: 100%; }
+.proyecto-imagen { aspect-ratio: 4 / 3; height: 100%; width: 100%; object-fit: cover; display: block; }
 .proyecto-texto { padding: 2rem 2rem 2rem 0; }
 .proyecto-texto p { color: var(--salvia); }
 
