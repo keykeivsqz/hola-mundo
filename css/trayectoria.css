@@ -10,6 +10,7 @@
     --texto:#26301f;
     --texto-suave:#5b6350;
     --sombra: 0 10px 30px rgba(31,51,32,0.12);
+    --fondo-claro:#fffacd;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
